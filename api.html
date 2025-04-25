@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    /*const person = {
+        name: "loveness",
+        age: 21,
+        sex: "F"
+    };
+    console.log(person.name);*/
+   const students = [
+     {
+        name : "precious",
+        sex: "M",
+        age :21
+     },
+     {
+        name : "loveness",
+        sex : "F",
+        age :22
+     },
+     {
+        name : "james",
+        sex: "M",
+        age :19
+     },
+     {
+        name : "mark",
+        sex : "M",
+        age :25
+     },
+     {
+        name : "nespy",
+        sex: "M",
+        age :18
+     },
+     {
+        name : "simeon",
+        sex : "M",
+        age :20
+     },
+     {
+        name : "felix",
+        sex: "M",
+        age : 22
+     },
+ 
+   ] ;
+   //console.log(students[6].name+ ", " +students[6].age)
+    // students.forEach((student)=>{
+       // console.log(student.name)
+    // });
+    students.map((student)=>{
+        if(student.sex === "F"){
+            console.log(student.name)  
+        }
+   });
+
+   // 1. Display the first three students
+   console.log("First three students:");
+   students.slice(0, 3).forEach(student => {
+     console.log(`${student.name}, ${student.age}, ${student.sex}`);
+   });
+    // 2. Display name of the oldest student
+    const oldest = students.reduce((max, student) => student.age > max.age ? student : max, students[0]);
+   console.log(`Oldest student: ${oldest.name}`);
+
+   // 3. Display name of the youngest student
+   const youngest = students.reduce((min, student) => student.age < min.age ? student : min, students[0]);
+   console.log(`Youngest student: ${youngest.name}`);
+
+    // 4. Add a new student dynamically
+    const newStudent = {
+       name: "brown",
+       sex: "M",
+       age: 25
+   };
+   students.push(newStudent);
+   console.log("New student added: " + newStudent.name);
+   
+        </script>
+
+</html>
